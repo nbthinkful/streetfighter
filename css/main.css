@@ -1,0 +1,94 @@
+body {
+	background-color: black;	
+}
+
+.main {
+	background-color: white;
+	margin-top: 110px;
+	padding-left: 100px;
+	min-width: 1200px;
+	height: 500px;
+}
+
+.ryu{
+	float: left;
+}
+
+.ryu-posture {
+	width: 659px;
+	height: 494px;
+	background-repeat: no-repeat;
+}
+
+.ryu-ready, .ryu-throwing, .ryu-cool {
+	display: none;
+}
+
+.ryu-ready {
+	background-image: url('../images/ryu-ready-position.gif');
+}
+
+.ryu-still {
+	background-image: url('../images/ryu-standing-still.png');
+}
+
+.ryu-throwing {
+	background-image: url('../images/ryu-throwing-hadouken.png');
+}
+
+.ryu-cool {
+	background-image: url('../images/ryu-cool.gif');
+}
+
+.hadouken {
+	background-image: url('../images/hadouken.gif');
+	background-repeat: no-repeat;
+	width: 156px;
+	height: 90px;
+    position: absolute;	
+  	left:550px;
+  	margin-top:170px;
+    display: none;
+}
+
+.hadouken.animate {
+	display:block;
+	-webkit-animation: hadouken_animation 0.5s 0s 1;
+	-moz-animation:    hadouken_animation 0.5s 0s 1;
+	-ms-animation:     hadouken_animation 0.5s 0s 1;
+	-o-animation:      hadouken_animation 0.5s 0s 1;
+	animation:         hadouken_animation 0.5s 0s 1;
+	
+	-webkit-animation-timing-function: ease-in;
+	-moz-animation-timing-function:    ease-in;
+	-ms-animation-timing-function:     ease-in;
+	-o-animation-timing-function:      ease-in;
+	animation-timing-function:         ease-in;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode:    forwards;
+	-ms-animation-fill-mode:     forwards;
+	-o-animation-fill-mode:      forwards;
+	animation-fill-mode:         forwards;
+}
+
+@-webkit-keyframes hadouken_animation {
+	0%   { -webkit-transform: translateX(0px); }
+	100% { -webkit-transform: translateX(500px); visibility: hidden;}
+}
+@-moz-keyframes hadouken_animation {
+	0%   { -moz-transform:    translateX(0px); }
+	100% { -moz-transform:    translateX(500px); visibility: hidden;}
+}
+@-ms-keyframes hadouken_animation {
+	0%   { -ms-transform:     translateX(0px); }
+	100% { -ms-transform:     translateX(500px); visibility: hidden;}
+}
+@-o-keyframes hadouken_animation {
+	0%   { -o-transform:      translateX(0px); }
+	100% { -o-transform:      translateX(500px); visibility: hidden;}
+}
+@keyframes hadouken_animation {
+	0%   { transform:         translateX(0px); }
+	100% { transform:         translateX(500px); visibility: hidden;}
+}
