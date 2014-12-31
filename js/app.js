@@ -20,7 +20,12 @@ function showRyuPosture(className) {
 
 $(document)
 	.ready(function() {	
-		$('.ryu')
+		$('.hadouken').parent().on('animationend webkitAnimationEnd oAnimationEnd msAnimationEnd mozAnimationEnd', 
+				'.hadouken', function () {
+    				$('.hadouken').hide();
+			    });
+
+		$('.ryu')			
 			.mouseenter(function(){		
 				showRyuPosture('ryu-ready');
 			})
@@ -31,8 +36,9 @@ $(document)
 				playHadouken();
 				showRyuPosture('ryu-throwing');
 				var hadouken = $('.hadouken').addClass('animate');
-				var hadoukenClone = hadouken.clone(true);
+				var hadoukenClone = hadouken.clone(true);				
 				hadouken.replaceWith(hadoukenClone);
+				hadoukenClone.show();
 			})
 			.mouseup(function(){
 				showRyuPosture('ryu-ready');
